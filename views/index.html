@@ -3,7 +3,11 @@
 
 <head>
   <meta charset="UTF-8">
+<<<<<<< HEAD
+  <title>Restaurant</title>
+=======
   <title>Welcome to Hot Restaurant</title>
+>>>>>>> a4b7f8c97fb42e51f4039bc5fbb0bd1615998aa5
   <!-- Latest compiled and minified CSS & JS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -22,11 +26,16 @@
       <h3 class="text-center">Hottest Restaurant in the World!</h3>
       <h3 class="text-center">We only have 5 tables! Book your seat before they all are gone!</h3>
       <hr>
+      <a href="reserve">Hello</a>
       <div class="col-lg-12 text-center">
-        <button class="btn btn-danger btn-lg col-lg-5 text-center" id="res-btn">
-          <span class="fa fa-plus"></span> Add New Reservation</button>
-        <button class="btn btn-danger btn-lg col-lg-5 text-center" id="table-btn">
-          <span class="fa fa-table"></span> Table</button>
+        <a href="/reserve">
+          <button class="btn btn-danger btn-lg col-lg-5 text-center" id="table-btn">
+            <span class="fa fa-plus"></span>Add New Reservation</button>
+        </a>
+        <a href="/table">
+          <button class="btn btn-danger btn-lg col-lg-5 text-center" id="table-btn">
+            <span class="fa fa-table"></span> Table</button>
+        </a>
       </div>
     </div>
   </div>
@@ -37,24 +46,20 @@
     </div>
   </footer>
 
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
     // QUESTION: What is this code doing?
     $("#res-btn").on("click", function () {
-      var resTable = $("#character-search").val().trim();
-      searchedCharacter = searchedCharacter.replace(/\s+/g, "").toLowerCase();
+      //   // QUESTION: What does $.get do? What are the parameters it is expecting?
+      $.get("/reserve", function (data) {
 
-      // QUESTION: What does $.get do? What are the parameters it is expecting?
-      $.get("/api/characters/" + searchedCharacter, function (data) {
       });
     });
     $("#table-btn").on("click", function () {
-      var searchedCharacter = $("#character-search").val().trim();
-      searchedCharacter = searchedCharacter.replace(/\s+/g, "").toLowerCase();
       // QUESTION: What does $.get do? What are the parameters it is expecting?
       $.get("/api/characters/" + searchedCharacter, function (data) {
       });
     });
-  </script>
+  </script> -->
 
 </body>
 
