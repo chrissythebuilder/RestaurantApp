@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <title>Star Wars - Express</title>
+  <title>Reservation at Hot Restaurant</title>
   <!-- Latest compiled and minified CSS & JS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -11,48 +10,37 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 </head>
-
 <body>
 
-  <div class="container">
-    <div class="jumbotron" id="text-center">
-      <h1 class="text-center"></h1>
-      <h3 class="text-center">Hotest Restaurant in the World!</h3>
-      <h3 class="text-center">We only have 5 tables! Book your seat before they all are gone!</h3>
-      <hr>
-      <div class="col-lg-12 text-center">
-        <button class="btn btn-danger btn-lg col-lg-5 text-center" id="res-btn">
-          <span class="fa fa-plus"></span> Add New Reservation</button>
-        <button class="btn btn-danger btn-lg col-lg-5 text-center" id="table-btn">
-          <span class="fa fa-table"></span> Table</button>
-      </div>
-    </div>
-  </div>
-  <footer class="footer">
     <div class="container">
-      <a href="">API Table Link</a>
-      <a href="">API Waiting Link</a>
+        <div class="jumbotron" id="text-center">
+            <h1 class="text-center">Hot Restaurant</h1>
+            <h3 class="text-center">Hotest Restaurant in the World!</h3>
+            <hr>
+            <a href="reserve.html">
+
+                <div class="col-lg-12">
+                    <button class="btn btn-danger btn-lg col-lg-5text-center"> <span class="fa fa-plus"></span>Make Reservation</button>
+                </div>
+            </a>
+        </div>
     </div>
-  </footer>
 
-  <script type="text/javascript">
-    // QUESTION: What is this code doing?
-    $("#res-btn").on("click", function () {
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">Current Reservation</h4>
+        </div>
+        <div class="panel-body" id="tableSection"></div>
+    </div>
 
-      // QUESTION: What does $.get do? What are the parameters it is expecting?
-      $.get("/tables", function (data) {
+    <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">Waitlist</h4>
+            </div>
+            <div class="panel-body" id="waitlistSection"></div>
+        </div>
+    
 
-      });
-    });
-    $("#table-btn").on("click", function () {
-      var searchedCharacter = $("#character-search").val().trim();
-      searchedCharacter = searchedCharacter.replace(/\s+/g, "").toLowerCase();
-      // QUESTION: What does $.get do? What are the parameters it is expecting?
-      $.get("/api/characters/" + searchedCharacter, function (data) {
-      });
-    });
-  </script>
 
 </body>
-
 </html>
